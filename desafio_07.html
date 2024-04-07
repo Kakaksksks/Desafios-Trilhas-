@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Total da Compra</title>
+</head>
+
+<body>
+    <section>
+        <p>Desafio 07</p>
+        <h1>
+            7.Em uma loja de conveniência, um cliente comprou três itens e precisa calcular o total da compra. Os preços
+            dos itens são R$ 2,50, R$ 3,75 e R$ 1,99. Crie um algoritmo que retorne o valor total.
+        </h1>
+    </section>
+    
+    <h1>Total da Compra</h1>
+    <p id="valores"></p>
+    <p>O total da compra é:</p>
+    <h2 id="total"></h2>
+
+    <script>
+        // Preços dos itens
+        const precos = [2.50, 3.75, 1.99];
+
+        // Função para calcular o total
+        function calcularTotal(precos) {
+            let total = 0;
+            for (let i = 0; i < precos.length; i++) {
+                total += precos[i];
+            }
+            return total;
+        }
+
+        // Calculando e exibindo o total
+        const total = calcularTotal(precos);
+        document.getElementById('valores').textContent = `valores em R$: [${precos.join(", ")}]`;
+        document.getElementById('total').textContent = `R$ ${total.toFixed(2)}`;
+    </script>
+</body>
+
+</html>

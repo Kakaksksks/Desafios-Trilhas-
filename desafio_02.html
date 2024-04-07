@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Organizador de Números</title>
+</head>
+
+<body>
+    <section>
+        <p>Desafio 02</p>
+        <h1>
+            2. Tais está participando de um sorteio na Loteria e recebeu uma lista de números aleatórios para poder
+            apostar. Os números foram: 15, 8, 90, 75, 102, 6 e 2. Por ser bastante cautelosa, ela gostaria de saber qual
+            é o menor número e qual é o maior número.
+
+            Ajude Tais e escreva um programa que faça a lógica de programação para organização dos números, receba os
+            números da lista e imprima na tela o menor número digitado e o maior número digitado.
+        </h1>
+    </section>
+    
+    <h1>Organizador de Números</h1>
+    <p>Digite os números separados por vírgula:</p>
+    <input type="text" id="numeros" placeholder="15, 8, 90, 75, 102, 6, 2">
+    <button onclick="organizarNumeros()">Organizar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function organizarNumeros() {
+            // Obtém os números do campo de entrada
+            var numerosString = document.getElementById('numeros').value;
+            // Converte a string de números em um array
+            var numeros = numerosString.split(',').map(Number);
+
+            // Encontra o menor e o maior número
+            var menorNumero = Math.min(...numeros);
+            var maiorNumero = Math.max(...numeros);
+
+            // Exibe os resultados
+            document.getElementById('resultado').innerHTML = "O menor número é: " + menorNumero + "<br>O maior número é: " + maiorNumero;
+        }
+    </script>
+</body>
+
+</html>

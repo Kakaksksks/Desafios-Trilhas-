@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contador de Letras Maiúsculas</title>
+</head>
+
+<body>
+    <section>
+        <p>Desafio 10</p>
+        <h1> 10. Desenvolver um programa para contar o número de letras maiúsculas da string abaixo: </h1>
+        <h1> “LoReM IpSuM Is sImPlY DuMmY TeXt oF ThE PrInTiNg aNd tYpEsEtTiNg iNdUsTrY” </h1>
+    </section>
+    
+    <h1>Contador de Letras Maiúsculas</h1>
+    <label for="frase">Digite uma frase:</label>
+    <input type="text" id="frase" name="frase">
+    <button id="contar">Contar Letras Maiúsculas</button>
+    <p id="resultado"></p>
+
+    <script>
+        document.getElementById('contar').addEventListener('click', function () {
+            var frase = document.getElementById('frase').value;
+            var contador = 0;
+            for (var i = 0; i < frase.length; i++) {
+                if (frase[i] === frase[i].toUpperCase() && frase[i] !== frase[i].toLowerCase()) {
+                    contador++;
+                }
+            }
+            document.getElementById('resultado').textContent = "Número de letras maiúsculas: " + contador;
+        });
+    </script>
+</body>
+
+</html>

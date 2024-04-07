@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo de Multa</title>
+</head>
+
+<body>
+    <section>
+        <p>Desafio 08</p>
+        <h1>
+            8. Em um sistema de biblioteca, é necessário calcular a multa a ser paga por um usuário que atrasou a
+            devolução de um livro. A multa é de R$ 0,50 por dia de atraso. O usuário atrasou a devolução do livro em 7
+            dias. Crie um algoritmo que faça o cálculo total que o aluno deverá pagar a biblioteca.
+        </h1>
+    </section>
+
+    <h1>Cálculo de Multa por Atraso</h1>
+    <ul>
+        <li>Multa por dia de atraso R$ 0,50</li>
+        <li>Número de dias de atraso 7</li>
+    </ul>
+    <p>O total da multa a ser paga é:</p>
+    <h2 id="multaTotal"></h2>
+
+    <script>
+        // Multa por dia de atraso
+        const multaPorDia = 0.50;
+        // Número de dias de atraso
+        const diasAtraso = 7;
+        // Cálculo da multa total
+        const multaTotal = multaPorDia * diasAtraso;
+        // Exibindo o total da multa
+        document.getElementById('multaTotal').textContent = `R$ ${multaTotal.toFixed(2)}`;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CÁLCULO DA MÉDIA DO ALUNO</title>
+</head>
+
+<body>
+    <section>
+        <p>Desafio 01</p>
+        <h1>
+        1. Imagine que você está criando um sistema escolar para obter a média dos alunos da sala. Foram realizadas 3
+        avaliações com nota máxima de 10 pontos. Aline, tirou na primeira nota o total de 8 pontos, na segunda nota tirou 9
+        pontos e na terceira nota 7 pontos.
+        
+        Escreva um programa que receba as notas, faça o cálculo da média e imprima o resultado final da média.
+        </h1>
+    </section>
+    
+    <h1>CÁLCULO DA MÉDIA DO ALUNO</h1>
+    <p>Por favor, informe as três notas finais:</p>
+    <input type="number" id="nota1" min="0" max="10">
+    <input type="number" id="nota2" min="0" max="10">
+    <input type="number" id="nota3" min="0" max="10">
+    <button onclick="verificarNota()">Verificar Nota</button>
+    <p id="resultado"></p>
+</body>
+<script>
+    function verificarNota() {
+        // coletando valores das notas
+        const nota1 = parseFloat(document.getElementById('nota1').value);
+        const nota2 = parseFloat(document.getElementById('nota2').value);
+        const nota3 = parseFloat(document.getElementById('nota3').value);
+        // capturando elemento para saida das informações
+        const resultado = document.getElementById('resultado');
+        // calculando a media das notas
+        const media = (nota1 + nota2 + nota3) / 3;
+        // validando a media das notas
+        if (media >= 7 && media <= 10) {
+            resultado.textContent = "Aprovado";
+        } else if (media >= 0 && media < 7) {
+            resultado.textContent = "Reprovado";
+        } else {
+            resultado.textContent = "Nota inválida";
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Fatorial</title>
+</head>
+
+<body>
+    <section>
+        <p>Desafio 06</p>
+        <h1>
+            6. Escreva um programa para encontrar o fatorial do número 12.
+        </h1>
+    </section>
+    
+    <h1>Calculadora Fatorial de números</h1>
+
+    <label for="numero">Informe um número:</label>
+    <input type="number" id="numero" name="numero">
+
+    <button id="calcular">Calcular Fatorial</button>
+
+    <p id="resultado"></p>
+
+    <p>logo o fatorial de 12 é: 479001600</p>
+
+    <script>
+        document.getElementById('calcular').addEventListener('click', function () {
+            var numero = parseInt(document.getElementById('numero').value);
+            var resultado = 1;
+            for (var count = 1; count <= numero; count++) {
+                resultado *= count;
+            }
+            document.getElementById('resultado').textContent = "O fatorial de " + numero + " é: " + resultado;
+        });
+    </script>
+</body>
+
+</html>

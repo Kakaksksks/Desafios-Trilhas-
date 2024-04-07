@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Idade</title>
+</head>
+
+<body>
+    <section>
+        <p>Desafio 11</p>
+        <h1>
+            11. Crie uma lógica para calcular a idade de uma pessoa. Essa lógica deverá receber um valor de ano de
+            nascimento no formato “yyyy-MM-dd” e deverá retornar o número da idade da pessoa como resultado.
+        </h1>
+    </section>
+    
+    <h1>Calculadora de Idade</h1>
+
+    <label for="dataNascimento">Informe sua data de nascimento:</label>
+    <input type="date" id="dataNascimento" name="dataNascimento">
+    
+    <button id="calcular">Calcular Idade</button>
+    
+    <p id="resultado"></p>
+
+    <script>
+        document.getElementById('calcular').addEventListener('click', function () {
+            var dataNascimento = new Date(document.getElementById('dataNascimento').value);
+            var dataAtual = new Date();
+            var idade = dataAtual.getFullYear() - dataNascimento.getFullYear();
+            var m = dataAtual.getMonth() - dataNascimento.getMonth();
+            if (m < 0 || (m === 0 && dataAtual.getDate() < dataNascimento.getDate())) {
+                idade--;
+            }
+            document.getElementById('resultado').textContent = "Sua idade é: " + idade + " anos";
+        });
+    </script>
+</body>
+
+</html>

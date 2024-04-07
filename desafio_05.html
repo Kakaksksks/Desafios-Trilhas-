@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contador de Palavras</title>
+</head>
+
+<body>
+    <section>
+        <p>Desafio 05</p>
+        <h1>
+            5. Escreva um programa que conte o número de palavras em uma frase fornecida pelo usuário. A frase é: 
+            "What is Lorem Ipsum?"
+        </h1>
+    </section>
+
+    <h1>Contador de Palavras</h1>
+    <p>Digite uma frase e clique no botão</p>
+    <input type="text" id="frase" value="What is Lorem Ipsum?" placeholder="Digite aqui...">
+    <button onclick="contarPalavras()">Contar Palavras</button>
+    <p id="resultado"></p>
+
+    <script>
+        function contarPalavras() {
+            const frase = document.getElementById('frase').value;
+            const palavras = frase.trim().split(/\s+/);
+            const resultado = palavras.length;
+            document.getElementById('resultado').textContent = `Número de palavras: ${resultado}`;
+        }
+    </script>
+</body>
+
+</html>

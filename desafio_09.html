@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo de Pontos de Vida</title>
+</head>
+
+<body>
+
+    <section>
+        <p>Desafio 09</p>
+        <h1>
+            9. Em um jogo de RPG, o personagem do jogador possui pontos de vida (HP) que são reduzidos quando ele sofre
+            danos dos inimigos. Seu personagem começa com 100 pontos de vida e sofre danos de 20 pontos em um ataque.
+            Crie um algoritmo informando quantos pontos de vida restarão após três ataques?
+        </h1>
+    </section>
+
+    <h1>Cálculo de Pontos de Vida Após Ataques</h1>
+    <p>Pontos de vida iniciais: 100</p>
+    <p>Danos por ataque: 20 pontos</p>
+    <p>Número de ataques: 3</p>
+    <p>Pontos de vida restantes após 3 ataques:</p>
+    <span id="pontosVidaRestantes"></span>
+
+    <script>
+        // Pontos de vida iniciais
+        const pontosVidaIniciais = 100;
+        // Danos por ataque
+        const danosPorAtaque = 20;
+        // Número de ataques
+        const numeroAtaques = 3;
+        // Cálculo dos pontos de vida restantes
+        const pontosVidaRestantes = pontosVidaIniciais - (danosPorAtaque * numeroAtaques);
+        // Exibindo os pontos de vida restantes
+        document.getElementById('pontosVidaRestantes').textContent = pontosVidaRestantes;
+    </script>
+</body>
+
+</html>

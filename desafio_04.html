@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Identificação de Números Primos</title>
+</head>
+
+<body>
+    <section>
+        <p>Desafio 04</p>
+        <h1>
+            4. Em uma pequena vila, o fazendeiro precisa separar os números primos para determinar quantos novos campos
+            plantar. Ele pede sua ajuda para identificar esses números criando um algoritmos. Os números são: 23, 16,
+            11, 8, 19, 14, 5, 21.
+        </h1>
+    </section>
+    
+    <h1>Identificação de Números Primos</h1>
+    <p>Os números primos são:</p>
+    <ul id="numerosPrimos"></ul>
+
+    <script>
+        // Lista dos números
+        const numeros = [23, 16, 11, 8, 19, 14, 5, 21];
+
+        // Função para verificar se um número é primo
+        function isPrime(num) {
+            if (num < 2) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        // Função para encontrar números primos na lista
+        function findPrimes(arr) {
+            return arr.filter(isPrime);
+        }
+
+        // Encontrando e exibindo os números primos
+        const numerosPrimos = findPrimes(numeros);
+        const listaNumerosPrimos = document.getElementById('numerosPrimos');
+        numerosPrimos.forEach(numero => {
+            const itemLista = document.createElement('li');
+            itemLista.textContent = numero;
+            listaNumerosPrimos.appendChild(itemLista);
+        });
+    </script>
+</body>
+
+</html>

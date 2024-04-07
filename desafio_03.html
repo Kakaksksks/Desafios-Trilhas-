@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ordenação de Frascos de Alquimistas</title>
+</head>
+
+<body>
+    <section>
+        <p>Desafio 03</p>
+        <h1>
+            3. Havia uma antiga guilda de alquimistas que guardava seus segredos em uma série de frascos numerados. No
+            entanto, ao longo dos anos, os frascos foram sendo desorganizados e agora os aprendizes alquimistas precisam
+            restaurar a ordem. Os números dos frascos representam a idade dos alquimistas que os criaram. Eles devem ser
+            ordenados em ordem crescente para revelar um segredo alquímico há muito perdido. Mas, para isso, os aprendizes
+            devem usar suas habilidades em algoritmos de ordenação.
+
+            Escreva um programa que faça a ordenação dos frascos: 12, 5, 23, 17, 8, 14, 3, 19.
+        </h1>
+    </section>
+
+    <h1>Ordenação de Frascos de Alquimistas</h1>
+    <p>Os frascos ordenados são:</p>
+    <ul id="frascos"></ul>
+
+    <script>
+        // Lista dos frascos
+        const frascos = [12, 5, 23, 17, 8, 14, 3, 19];
+
+        // Função de comparação para ordenação crescente
+        function comparar(a, b) {
+            return a - b;
+        }
+
+        // Ordenando os frascos
+        const frascosOrdenados = frascos.sort(comparar);
+
+        // Exibindo os frascos ordenados
+        const listaFrascos = document.getElementById('frascos');
+        frascosOrdenados.forEach(frasco => {
+            const itemLista = document.createElement('li');
+            itemLista.textContent = frasco;
+            listaFrascos.appendChild(itemLista);
+        });
+    </script>
+</body>
+
+</html>
